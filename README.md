@@ -8,9 +8,7 @@
 
 **Materials Needed**:
 - Laptop with internet and Azure account
-- 
 - Azure Portal access ([portal.azure.com](https://portal.azure.com)).
-- Canva ([canva.com](https://canva.com)) or PowerPoint for diagrams.
 - Snipping Tool (Windows: Win+Shift+S) or Screenshot (Mac: Cmd+Shift+4).
 
 **Lesson Overview**: Configure two Azure VMs, simulate a 400G RoCEv2 environment with SoftRoCE, test Queue Pairs, and explore cybersecurity risks. Learn why this niche skill is critical for AI/HPC careers!
@@ -22,8 +20,7 @@
 ### 1. Set Up Azure Account (10 min)
 - Sign into Azure Portal ([portal.azure.com](https://portal.azure.com)) with student credits or trial.
 - Create a Resource Group (e.g., “RoCE-Lab”).
-- **Tip**: Use Azure for Students ($100 credit) to avoid costs.
-- **Visual**: Add Azure logo (download from [azure.microsoft.com](https://azure.microsoft.com), resize to 100x100px).
+
 
 ### 2. Deploy Two Azure VMs (20 min)
 - In Azure Portal, create two VMs:
@@ -36,7 +33,7 @@
 - **Network**: Create a VNet (“roce-vnet,” 192.168.1.0/24, subnet “default”). Assign: VM1 = 192.168.1.10, VM2 = 192.168.1.11.
 - **NSG**: Allow TCP/UDP (all ports) between VMs, allow SSH (port 22) from your IP.
 - SSH into VMs (`ssh student@<public_IP>`), verify: `ping 192.168.1.11` from VM1.
-- **Visual**: (VNet or NSG).
+
 
 ### 3. Install RDMA Tools (10 min)
 - Run:
